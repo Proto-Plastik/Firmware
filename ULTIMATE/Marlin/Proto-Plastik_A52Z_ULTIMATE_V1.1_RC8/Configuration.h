@@ -581,18 +581,19 @@
 //    |           |
 //    O-- FRONT --+
 //  (0,0)
-#define X_PROBE_OFFSET_FROM_EXTRUDER 15  // X offset: -left  +right  [of the nozzle]
+#define X_PROBE_OFFSET_FROM_EXTRUDER 26  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 0  // Y offset: -front +behind [the nozzle]
 #define Z_PROBE_OFFSET_FROM_EXTRUDER -1.20   // Z offset: -below +above  [the nozzle]
 
 // X and Y axis travel speed (mm/m) between probes
-#define XY_PROBE_SPEED 3000
+#define XY_PROBE_SPEED 5000
 // Speed for the first approach when double-probing (with PROBE_DOUBLE_TOUCH)
-#define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
+//#define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
+#define Z_PROBE_SPEED_FAST 800
 // Speed for the "accurate" probe of each point
 #define Z_PROBE_SPEED_SLOW (Z_PROBE_SPEED_FAST / 2)
 // Use double touch for probing
-#define PROBE_DOUBLE_TOUCH
+//#define PROBE_DOUBLE_TOUCH
 
 //
 // Allen Key Probe is defined in the Delta example configurations.
@@ -658,8 +659,8 @@
  * Example: `M851 Z-5` with a CLEARANCE of 4  =>  9mm from bed to nozzle.
  *     But: `M851 Z+1` with a CLEARANCE of 2  =>  2mm from bed to nozzle.
  */
-#define Z_CLEARANCE_DEPLOY_PROBE   15 // Z Clearance for Deploy/Stow
-#define Z_CLEARANCE_BETWEEN_PROBES  15 // Z Clearance between probe points
+#define Z_CLEARANCE_DEPLOY_PROBE   5 // Z Clearance for Deploy/Stow
+#define Z_CLEARANCE_BETWEEN_PROBES  5 // Z Clearance between probe points
 
 //
 // For M851 give a range for adjusting the Z probe offset
@@ -723,7 +724,7 @@
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-#define X_MAX_POS 185
+#define X_MAX_POS 190
 #define Y_MAX_POS 195
 #define Z_MAX_POS 140
 
@@ -811,8 +812,8 @@
   #define ABL_GRID_POINTS_Y ABL_GRID_POINTS_X
 
   // Set the boundaries for probing (where the probe can reach).
-  #define LEFT_PROBE_BED_POSITION 15
-  #define RIGHT_PROBE_BED_POSITION 175
+  #define LEFT_PROBE_BED_POSITION 26
+  #define RIGHT_PROBE_BED_POSITION 190
   #define FRONT_PROBE_BED_POSITION 0
   #define BACK_PROBE_BED_POSITION 190
 
