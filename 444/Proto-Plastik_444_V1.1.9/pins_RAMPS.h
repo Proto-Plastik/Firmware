@@ -60,7 +60,7 @@
 #else
   #define SERVO0_PIN       11
 #endif
-#define SERVO1_PIN          6
+#define SERVO1_PIN         12
 #define SERVO2_PIN          5
 #ifndef SERVO3_PIN
   #define SERVO3_PIN        4
@@ -283,7 +283,7 @@
 #endif
 
 #ifndef PS_ON_PIN
-  #define PS_ON_PIN        12
+  #define PS_ON_PIN        -1
 #endif
 
 #if ENABLED(CASE_LIGHT_ENABLE) && !defined(CASE_LIGHT_PIN) && !defined(SPINDLE_LASER_ENABLE_PIN)
